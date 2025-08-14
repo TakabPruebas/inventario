@@ -1,0 +1,173 @@
+body { background: #f7f9fb; margin: 0; }
+
+.main-inv-layout { display: flex; }
+.inv-content {
+    flex: 1;
+    padding: 36px 38px 24px 38px;
+    min-height: 100vh;
+}
+.inv-header {
+    display: flex;
+    justify-content: space-between; /* separa los lados */
+    align-items: center;            /* alinea verticalmente */
+    margin: 30px 0 24px 0;
+}
+.inv-summary-cards {
+    display: flex;
+    gap: 18px; /* espacio entre botones */
+}
+.inv-title {
+    font-size: 2.3rem; font-weight: 800; color: #202a4c;
+}
+.inv-desc {
+    font-size: 1.11rem; color: #8996b8; margin-top: 5px;
+}
+.btn-principal {
+    background: #1646b0;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 1.06rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    transition: background .14s;
+    box-shadow: 0 2px 9px 0 rgba(44,66,165,0.09);
+    /* ❌ ELIMINADO: margin-right: 500px; */
+}
+
+.btn-principal:hover {
+    background: #123478;
+}
+
+.btn-secundario {
+    background: #b01616;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 1.06rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    transition: background .14s;
+    box-shadow: 0 2px 9px 0 rgba(216, 17, 17, 0.09);
+}
+
+.btn-secundario:hover {
+    background: #781212;
+}
+
+.inv-summary-cards {
+    display: flex;
+    gap: 18px;
+    margin: 30px 0 24px 0;
+}
+
+
+.inv-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 2px 8px 0 rgba(23,44,87,0.07);
+    padding: 20px 30px;
+    position: relative;
+    min-width: 170px;
+}
+.inv-card-label {
+    font-size: 1.05rem; color: #7e8aac; margin-bottom: 9px;
+}
+.inv-card-value {
+    font-size: 2.1rem; font-weight: 900; color: #202a4c; margin-bottom: 3px;
+}
+.inv-card-icon {
+    position: absolute; top: 22px; right: 25px; font-size: 2rem; opacity: 0.18;
+}
+.inv-card-icon-products { color: #1646b0; }
+.inv-card-icon-alert { color: #c44a33; }
+.inv-card-icon-money { color: #149146; }
+.inv-card-icon-move { color: #5c68d3; }
+
+.inv-tabs {
+    display: flex; gap: 6px; margin-bottom: 16px;
+}
+.inv-tab {
+    background: #f3f7fb;
+    border: none;
+    border-radius: 7px 7px 0 0;
+    padding: 11px 32px;
+    font-weight: 700;
+    color: #2c355b;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background .12s;
+}
+.inv-tab.active, .inv-tab:focus {
+    background: #fff;
+    color: #1742a6;
+    border-bottom: 2px solid #1742a6;
+}
+.inv-tools-bar {
+    display: flex; align-items: center; gap: 18px; margin-bottom: 10px;
+}
+.inv-search {
+    background: #f4f5f8; border-radius: 8px;
+    display: flex; align-items: center;
+    padding: 6px 12px;
+    gap: 7px;
+    flex: 1;
+}
+.inv-search input {
+    border: none; background: none; outline: none;
+    font-size: 1.01rem; width: 100%;
+    color: #1e294b;
+}
+.inv-select-cat {
+    background: #f4f5f8; border-radius: 8px;
+    border: none; font-size: 1.01rem; color: #232a4d;
+    padding: 7px 14px;
+}
+.inv-table-wrap {
+    background: #fff; border-radius: 12px;
+    box-shadow: 0 1px 8px 0 rgba(23,44,87,0.06);
+    margin-top: 7px; overflow-x: auto;
+}
+.inv-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.inv-table th, .inv-table td {
+    padding: 13px 16px;
+    font-size: 1.02rem;
+    border-bottom: 1px solid #f1f2f8;
+    text-align: center;
+    vertical-align: middle;
+}
+.inv-table thead th {
+    background: #f4f6fb;
+    color: #1a2a50;
+    font-weight: 800;
+    border-bottom: 2px solid #e2e4ec;
+}
+.inv-table tbody tr:hover {
+    background: #f6f8fc;
+}
+.inv-table td strong { color: #182e59; }
+.badge {
+    display: inline-block;
+    border-radius: 11px;
+    padding: 4px 16px;
+    font-size: .99rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+.badge-normal { background: #eafbf3; color: #15b34c;}
+.badge-critico { background: #ffeaea; color: #e12d39;}
+@media (max-width:1100px){
+    .inv-summary-cards{flex-direction:column;}
+    .inv-card{min-width:unset;}
+}
+@media (max-width:900px){
+    .inv-content{padding: 15px 4vw;}
+    .inv-title{font-size:1.28rem;}
+    .inv-table th, .inv-table td {font-size:.93rem; padding:7px 5px;}
+}
